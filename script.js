@@ -27,6 +27,8 @@ function generateDivGrid(parentElement, sideLength) {
       pixel.style.width = (gridTotalSize / sideLength) + 'px';
       pixel.style.height = pixel.style.width;
 
+      pixel.addEventListener('mouseover', paintDiv);
+
       pixelRow.appendChild(pixel);
     }
 
@@ -38,4 +40,9 @@ function removeAllChildElements(parentElement) {
   while (parentElement.lastElementChild) {
     parentElement.removeChild(parentElement.lastElementChild);
   }
+}
+
+function paintDiv(event) {
+  const divElement = event.target;
+  divElement.classList.add('painted');
 }
