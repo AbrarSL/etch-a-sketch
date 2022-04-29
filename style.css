@@ -50,8 +50,8 @@ h1 {
 .drawing-grid {
   padding: 1em;
 
-  width: 960px;
-  height: 960px;
+  min-width: 960px;
+  min-height: 960px;
 
   border: 2px solid var(--fg-color);
 
