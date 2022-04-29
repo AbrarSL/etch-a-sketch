@@ -55,6 +55,10 @@ h1 {
   font-size: 0.7rem;
 }
 
+.brush-mode {
+  margin-top: 1rem;
+}
+
 .drawing-grid {
   padding: 0.5rem;
 
@@ -74,6 +78,8 @@ h1 {
 }
 
 .pixel {
+  box-shadow: 0 0 8px black;
+
   background-color: var(--fg-color);
 }
 
@@ -94,12 +100,13 @@ h1 {
   background-color: var(--fg-color);
 
   color: var(--bg-color);
+  font-size: 1rem;
 
   cursor: pointer;
 }
 
 .btn:hover {
-  filter: contrast(3);
+  filter: brightness(0.9);
 }
 
 .btn:active {
