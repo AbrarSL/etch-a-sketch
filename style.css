@@ -57,7 +57,7 @@ h1 {
 }
 
 .drawing-grid {
-  padding: 1em;
+  padding: 0.5rem;
 
   min-width: 960px;
   min-height: 960px;
@@ -115,7 +115,7 @@ h1 {
 
 footer {
   padding: 2em;
-  margin-top: 1em;
+  margin-top: 1rem;
 
   background-color: var(--fg-color);
 

@@ -1,10 +1,15 @@
 const gridTotalSize = 960;
 
+updateGridSize();
+
 const gridSizeInput = document.querySelector('#gridSizeInput');
 gridSizeInput.addEventListener('change', updateGridSize);
 
-function updateGridSize(event) {
-  const gridSizeInput = event.target;
+const resetBtn = document.querySelector('#resetBtn');
+resetBtn.addEventListener('click', updateGridSize);
+
+function updateGridSize() {
+  const gridSizeInput = document.querySelector('#gridSizeInput');
   const gridSizeLabel = gridSizeInput.previousElementSibling;
   const drawingGrid = document.querySelector('.drawing-grid');
 
