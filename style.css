@@ -37,6 +37,9 @@ h1 {
 
 .settings-area {
   padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .grid-size-label::after {
