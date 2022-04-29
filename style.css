@@ -27,6 +27,10 @@ h1 {
 }
 
 .content {
+  flex: 1;
+
+  min-height: 90vh;
+
   display: flex;
   justify-content: center;
 }
@@ -44,6 +48,13 @@ h1 {
 }
 
 .drawing-grid {
+  padding: 1em;
+
+  width: 960px;
+  height: 960px;
+
+  border: 2px solid var(--fg-color);
+
   display: flex;
   flex-direction: column;
 }
@@ -58,4 +69,17 @@ h1 {
 
 .pixel:hover {
   background-color: var(--bg-color);
+}
+
+footer {
+  padding: 2em;
+  margin-top: 1em;
+
+  background-color: var(--fg-color);
+
+  color: var(--bg-color);
+}
+
+footer * {
+  text-align: center;
 }
