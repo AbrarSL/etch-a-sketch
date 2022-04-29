@@ -12,12 +12,10 @@
   }
 }
 
-* {
-  border: 1px red solid;
-}
-
 body {
   margin: 0;
+
+  box-sizing: border-box;
 
   background-color: var(--bg-color);
 
@@ -30,6 +28,7 @@ h1 {
 
 .content {
   display: flex;
+  justify-content: center;
 }
 
 .settings-area {
