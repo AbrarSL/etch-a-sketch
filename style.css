@@ -81,6 +81,8 @@ h1 {
   box-shadow: 0 0 8px black;
 
   background-color: var(--fg-color);
+
+  transition: all ease 100ms;
 }
 
 .pixel:hover {
@@ -103,6 +105,8 @@ h1 {
   font-size: 1rem;
 
   cursor: pointer;
+
+  transition: all ease 250ms;
 }
 
 .btn:hover {

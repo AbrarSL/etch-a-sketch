@@ -1,4 +1,5 @@
 const gridTotalSize = 960;
+let penMode = true;
 
 updateGridSize();
 
@@ -7,6 +8,9 @@ gridSizeInput.addEventListener('change', updateGridSize);
 
 const resetBtn = document.querySelector('#resetBtn');
 resetBtn.addEventListener('click', updateGridSize);
+
+const brushMode = document.querySelectorAll('input[name="brushMode"');
+brushMode.forEach((brush) => brush.addEventListener('change', changePenMode));
 
 function updateGridSize() {
   const gridSizeInput = document.querySelector('#gridSizeInput');
@@ -49,5 +53,22 @@ function removeAllChildElements(parentElement) {
 
 function paintDiv(event) {
   const divElement = event.target;
-  divElement.classList.add('painted');
+
+  if (penMode) {
+    divElement.classList.add('painted');
+  } else {
+    divElement.classList.remove('painted');
+  }
+}
+
+function changePenMode(event) {
+  let radioBtn = event.target;
+
+  if (radioBtn.checked) {
+    if (radioBtn.id === 'penMode') {
+      penMode = true;
+    } else {
+      penMode = false;
+    }
+  }
 }
