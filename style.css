@@ -1,0 +1,46 @@
+:root {
+  color-scheme: light dark;
+
+  --bg-color: #eaeaea;
+  --fg-color: #242424;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #242424;
+    --fg-color: #eaeaea;
+  }
+}
+
+* {
+  border: 1px red solid;
+}
+
+body {
+  margin: 0;
+
+  background-color: var(--bg-color);
+
+  color: var(--fg-color);
+}
+
+h1 {
+  text-align: center;
+}
+
+.content {
+  display: flex;
+}
+
+.drawing-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.pixel-row {
+  display: flex;
+}
+
+.pixel {
+  background-color: var(--bg-color);
+}
