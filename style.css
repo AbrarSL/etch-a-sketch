@@ -13,7 +13,7 @@
 }
 
 * {
-  border: 1px red solid;
+  /* border: 1px red solid; */
 }
 
 body {
@@ -30,6 +30,18 @@ h1 {
 
 .content {
   display: flex;
+}
+
+.settings-area {
+  padding: 1rem;
+}
+
+.grid-size-label::after {
+  content: 'Grid Size';
+
+  display: block;
+
+  font-size: 0.7rem;
 }
 
 .drawing-grid {
