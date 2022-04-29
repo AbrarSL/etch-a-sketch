@@ -3,12 +3,18 @@
 
   --bg-color: #eaeaea;
   --fg-color: #242424;
+
+  --btn-suggested-bg-color: #3385ff;
+  --btn-suggested-fg-color: var(--bg-color);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-color: #242424;
     --fg-color: #eaeaea;
+
+    --btn-suggested-bg-color: #79a8ee;
+    --btn-suggested-fg-color: #242424;
   }
 }
 
@@ -78,6 +84,33 @@ h1 {
 
 .painted {
   background-color: var(--bg-color);
+}
+
+.btn {
+  padding: 0.5em 0.75em;
+
+  border-radius: 16px;
+  border-style: none;
+
+  background-color: var(--fg-color);
+
+  color: var(--bg-color);
+
+  cursor: pointer;
+}
+
+.btn:hover {
+  filter: contrast(3);
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btn-suggested {
+  background-color: var(--btn-suggested-bg-color);
+
+  color: var(--btn-suggested-fg-color);
 }
 
 footer {
