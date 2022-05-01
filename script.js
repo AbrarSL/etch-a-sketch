@@ -29,6 +29,8 @@ function generateDivGrid(parentElement, sideLength) {
 
     pixelRow.classList.add('pixel-row');
 
+    pixelRow.draggable = false;
+
     for (let i = 0; i < sideLength; i++) {
       const pixel = document.createElement('div');
 
@@ -37,6 +39,7 @@ function generateDivGrid(parentElement, sideLength) {
       pixel.style.height = pixel.style.width;
 
       pixel.addEventListener('mouseover', paintDiv);
+      pixel.draggable = false;
 
       pixelRow.appendChild(pixel);
     }
