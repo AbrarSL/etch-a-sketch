@@ -1,7 +1,15 @@
 const gridTotalSize = 960;
 let penMode = true;
+let drawEnable = false;
 
 updateGridSize();
+
+document.body.addEventListener('keydown', (event) => {
+  if (event.key === 'd') drawEnable = true;
+});
+document.body.addEventListener('keyup', (event) => {
+  if (event.key === 'd') drawEnable = false;
+});
 
 const gridSizeInput = document.querySelector('#gridSizeInput');
 gridSizeInput.addEventListener('change', updateGridSize);
@@ -29,8 +37,6 @@ function generateDivGrid(parentElement, sideLength) {
 
     pixelRow.classList.add('pixel-row');
 
-    pixelRow.draggable = false;
-
     for (let i = 0; i < sideLength; i++) {
       const pixel = document.createElement('div');
 
@@ -39,7 +45,6 @@ function generateDivGrid(parentElement, sideLength) {
       pixel.style.height = pixel.style.width;
 
       pixel.addEventListener('mouseover', paintDiv);
-      pixel.draggable = false;
 
       pixelRow.appendChild(pixel);
     }
@@ -57,10 +62,12 @@ function removeAllChildElements(parentElement) {
 function paintDiv(event) {
   const divElement = event.target;
 
-  if (penMode) {
-    divElement.classList.add('painted');
-  } else {
-    divElement.classList.remove('painted');
+  if (drawEnable) {
+    if (penMode) {
+      divElement.classList.add('painted');
+    } else {
+      divElement.classList.remove('painted');
+    }
   }
 }
 
